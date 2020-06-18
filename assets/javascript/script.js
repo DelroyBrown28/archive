@@ -145,6 +145,22 @@ $(document).ready(function () {
         })
     });
 
+        // Takes you to Language contents
+        $('.law_tab').click(function () {
+            $('.tabs').animate({
+                opacity: '0'
+            }, function () {
+                $('.top_contents_index').delay(500).animate({
+                    height: '0'
+                }, function () {
+                    setTimeout(function () {
+                        location.href = "law.html";
+                    })
+                })
+            })
+        });
+    
+
 
 
 
