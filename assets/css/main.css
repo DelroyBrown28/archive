@@ -99,6 +99,7 @@ a:visited {
         justify-content: center;
         color: #fff;
     }
+
 }
 
 @media only screen and (min-width: 1224px) {
@@ -132,13 +133,14 @@ a:visited {
     .top_contents_index {
         position: relative;
         width: 100%;
-        height: 60%;
+        height: 0%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
+        background-color: #f1f1f1;
 
     }
+
 
 
     .file_count {
@@ -161,6 +163,7 @@ a:visited {
         right: 20px;
         font-size: 16px;
 
+        opacity: 0;
     }
 
     #the_time {
@@ -241,7 +244,7 @@ a:visited {
     /*-------------HISTORY PAGE-------------*/
 
 
-    #large_file_popup {
+    .large_file_popup {
         position: absolute;
         width: 100%;
         color: red;
@@ -404,4 +407,8 @@ a:visited {
 .snap_to_religion:hover,
 .snap_to_world:hover {
     opacity: 0.8;
+}
+
+.large_file:hover>.large_file_popup {
+    opacity: 1;
 }

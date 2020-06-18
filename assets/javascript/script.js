@@ -18,16 +18,6 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $('.large_file').hover(function() {
-        $('#large_file_popup').animate({
-            opacity: '1'
-        });
-    }, function() {
-        $('#large_file_popup').animate({
-            opacity: '0'
-        })
-    })
-
 
     // Local time display
     function addZero(i) {
@@ -54,8 +44,8 @@ $(document).ready(function () {
         $('.world_history_wrap').animate({
             opacity: '1'
         });
-        $('.top_contents_index').animate({
-            opacity: '1'
+        $('.top_contents_index').delay(1000).animate({
+            height: '60%'
         }, function () {
             $('.history_tab').animate({
                 opacity: '1'
@@ -75,7 +65,7 @@ $(document).ready(function () {
                                 $('.main_title').animate({
                                     opacity: '1'
                                 }, 2000, function () {
-                                    $('.file_count').animate({
+                                    $('.file_count, .local_date_time').animate({
                                         opacity: '1'
                                     })
                                 })
@@ -93,10 +83,10 @@ $(document).ready(function () {
     $('.main_title_white').click(function () {
         $('.world_history_wrap').animate({
             opacity: '0'
-        }, function () {
+        },200, function () {
             setTimeout(function () {
                 location.href = 'index.html'
-            }, 700);
+            }, 500);
         })
 
     });
@@ -106,9 +96,13 @@ $(document).ready(function () {
         $('.tabs').animate({
             opacity: '0'
         }, function () {
-            setTimeout(function () {
-                location.href = 'history.html'
-            }, 700);
+            $('.top_contents_index').delay(500).animate({
+                height: '0'
+            }, function () {
+                setTimeout(function () {
+                    location.href = "history.html";
+                })
+            })
         })
 
     });
@@ -118,9 +112,13 @@ $(document).ready(function () {
         $('.tabs').animate({
             opacity: '0'
         }, function () {
-            setTimeout(function () {
-                location.href = 'survival.html'
-            }, 700);
+            $('.top_contents_index').delay(500).animate({
+                height: '0'
+            }, function () {
+                setTimeout(function () {
+                    location.href = "survival.html";
+                })
+            })
         })
 
     });
@@ -130,9 +128,13 @@ $(document).ready(function () {
         $('.tabs').animate({
             opacity: '0'
         }, function () {
-            setTimeout(function () {
-                location.href = 'language.html'
-            }, 700);
+            $('.top_contents_index').delay(500).animate({
+                height: '0'
+            }, function () {
+                setTimeout(function () {
+                    location.href = "language.html";
+                })
+            })
         })
 
     });
