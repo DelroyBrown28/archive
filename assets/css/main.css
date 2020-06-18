@@ -9,7 +9,7 @@ html {
     font-family: 'Roboto Condensed', sans-serif;
     scroll-behavior: smooth;
     background: #222222;
-    cursor: url('/assets/images/cursorcircle.png'), pointer;
+    cursor: url('/assets/images/cursorcircle.png'), auto;
 }
 
 .cursor {
