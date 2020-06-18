@@ -7,7 +7,7 @@ $(document).ready(function () {
     document.addEventListener("mousemove", (e) => {
         cursor.setAttribute(
             "style",
-            "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+            "top: " + (e.pageY - 13) + "px; left: " + (e.pageX - 13) + "px;"
         );
     });
 
@@ -17,6 +17,15 @@ $(document).ready(function () {
             cursor.classList.remove("expand");
         }, 500);
     });
+
+    $('.large_file ').hover(function () {
+        $('.cursor').addClass('cursor_change');
+        document.getElementById('cursor').innerHTML = "LARGE FILE, CLICK TO DOWNLOAD";
+    }, function () {
+        $('.cursor').removeClass('cursor_change');
+        document.getElementById('cursor').innerHTML = "";
+
+    })
 
 
     // Local time display
@@ -83,7 +92,7 @@ $(document).ready(function () {
     $('.main_title_white').click(function () {
         $('.world_history_wrap').animate({
             opacity: '0'
-        },200, function () {
+        }, 200, function () {
             setTimeout(function () {
                 location.href = 'index.html'
             }, 500);

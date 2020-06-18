@@ -9,13 +9,15 @@ html {
     font-family: 'Roboto Condensed', sans-serif;
     scroll-behavior: smooth;
     background: #222222;
+    cursor: url('/assets/images/cursorcircle.png'), pointer;
 }
 
 .cursor {
     display: block;
-    width: 25px;
-    height: 25px;
-    bottom: 0;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
     color: #fff;
     position: absolute;
     transform: translate(-50%);
@@ -25,8 +27,9 @@ html {
     z-index: 111;
     border: 2px solid #A9CEC2;
     transition: all 0.4s ease-out;
-    animation: moveCursor1 0.5s infinite alternate;
+    animation: moveCursor1 5s infinite alternate;
 }
+
 
 
 .expand {
@@ -58,6 +61,18 @@ html {
         transform: scale(1);
         opacity: 0;
     }
+}
+
+.cursor_change {
+    height: 50px;
+    width: 300px;
+    border-radius: 0;
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    border: none;
 }
 
 
@@ -706,6 +721,3 @@ a:visited {
     opacity: 0.8;
 }
 
-.large_file:hover>.large_file_popup {
-    opacity: 1;
-}
