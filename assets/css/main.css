@@ -84,23 +84,7 @@ a:visited {
     opacity: 1;
 }
 
-@media only screen and (min-width: 320px) {
 
-    .top_contents,
-    .tab_contents {
-        display: none;
-    }
-
-    .for_small_screens {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-    }
-
-}
 
 @media only screen and (min-width: 1224px) {
 
@@ -108,6 +92,10 @@ a:visited {
 
     .for_small_screens {
         display: none;
+    }
+
+    body {
+        background: #222222;
     }
 
     .index_flow_wrap {
@@ -140,8 +128,6 @@ a:visited {
         background-color: #f1f1f1;
 
     }
-
-
 
     .file_count {
         width: 100%;
@@ -361,6 +347,317 @@ a:visited {
 
     /*-------------//  HISTORY PAGE-------------*/
 }
+
+@media only screen and (max-width: 1353px) {
+
+    .tab_contents {
+        flex-flow: row;
+        height: 50%;
+        border: 1px solid red;
+    }
+
+    .tab_description {
+        display: none;
+    }
+
+    .tabs {
+        height: 140px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+}
+
+@media only screen and (max-width: 1233px) {
+    /*-------------MAIN PAGE-------------*/
+
+    .for_small_screens {
+        display: none;
+    }
+
+    body {
+        background: #222222;
+    }
+
+    .index_flow_wrap {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    /*-----TOP CONTENTS-----*/
+
+    .top_contents {
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .top_contents_index {
+        position: relative;
+        width: 100%;
+        height: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1f1f1;
+
+    }
+
+    .file_count {
+        width: 100%;
+        position: absolute;
+        top: 20px;
+        color: #222222;
+        font-weight: 600;
+        margin-left: 20px;
+        font-weight: 200;
+        opacity: 0;
+
+
+    }
+
+    .local_date_time {
+        position: absolute;
+        display: flex;
+        top: 20px;
+        right: 20px;
+        font-size: 16px;
+
+        opacity: 0;
+    }
+
+    #the_time {
+        font-weight: 600;
+    }
+
+    .main_title,
+    .main_title_white {
+        position: absolute;
+        color: #222222;
+        font-size: 22px;
+        font-weight: 300;
+        cursor: pointer;
+        opacity: 0;
+
+    }
+
+    .main_title_white {
+        color: #fff;
+        opacity: 1;
+    }
+
+    /*-----//  TOP CONTENTS-----*/
+    /*-----MAIN TABS SECTION-----*/
+
+    .tab_contents {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .tabs {
+        position: relative;
+        height: 200px;
+        width: 270px;
+        margin: auto;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: 0.4s;
+        border-top: 1px solid white;
+        border-bottom: 6px solid rgba(255, 255, 255, 0.219);
+
+        opacity: 0;
+
+
+
+    }
+
+    .top_tab_line {
+        width: 10%;
+        border: 1px solid white;
+        transition: 0.4s;
+
+    }
+
+    .tab_number {
+        color: #fff;
+        font-size: 3.5em;
+
+    }
+
+    .tab_title {
+        margin: 10px 0px;
+        color: #fff;
+        font-weight: 500;
+        transition: 0.4s;
+    }
+
+    .tab_description {
+        color: #fff;
+        font-weight: 200;
+        opacity: 0.7;
+    }
+
+    /*-----//  MAIN TABS SECTION-----*/
+    /*-------------HISTORY PAGE-------------*/
+
+
+    .large_file_popup {
+        position: absolute;
+        width: 100%;
+        color: red;
+        text-align: center;
+        top: 12%;
+        font-weight: 200;
+        font-size: 20px;
+
+        opacity: 0;
+
+    }
+
+
+
+    .history_contents,
+    .world_history_wrap {
+        width: 90%;
+        height: 85%;
+        margin: auto;
+        display: flex;
+        flex-flow: column;
+
+
+    }
+
+    .sort_buttons {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        bottom: 0;
+        justify-content: center;
+    }
+
+    .sort_lists_button {
+        width: 150px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        background: #fff;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .world_history_wrap {
+        opacity: 0;
+
+    }
+
+    .world_history_item {
+        cursor: pointer;
+        transition: 0.4s;
+        display: flex;
+        font-size: 18px;
+        text-transform: capitalize;
+
+
+    }
+
+    .history_contents {
+        opacity: 0.7;
+        transition: 1s;
+    }
+
+    .history_heading {
+        color: #000;
+        font-size: 28px;
+        font-weight: 300;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        background: #A9CEC2;
+    }
+
+    .history_titles {
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .smaller_text {
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        font-weight: 200;
+        opacity: 0.5;
+        margin-top: 5px;
+    }
+
+    .history_list {
+        color: #fff;
+        padding: 0;
+        font-size: 22px;
+        font-weight: 300;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        overflow: auto;
+    }
+
+    .in_list_title {
+        margin: 20px 0px;
+        font-weight: bold;
+    }
+
+    .audio_icon,
+    .video_icon {
+        height: 20px;
+    }
+
+    /*-------------//  HISTORY PAGE-------------*/
+}
+
+@media only screen and (max-width: 1177px) {
+
+    .tabs {
+        border: none;
+    }
+
+}
+
+@media only screen and (max-width: 620px) {
+    .tab_contents {
+        height: 100%;
+        flex-flow: column;
+    }
+
+    .top_contents_index {
+        height: 5% !important;
+    }
+
+    .main_title {
+        font-weight: 600;
+    }
+}
+
+
+
+
 
 /*---Hovers and what not...---*/
 

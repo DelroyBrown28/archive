@@ -88,7 +88,6 @@ $(document).ready(function () {
                 location.href = 'index.html'
             }, 500);
         })
-
     });
 
     // Takes you to history contents
@@ -104,7 +103,6 @@ $(document).ready(function () {
                 })
             })
         })
-
     });
 
     // Takes you to Survival contents
@@ -136,7 +134,6 @@ $(document).ready(function () {
                 })
             })
         })
-
     });
 
 
