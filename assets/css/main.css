@@ -12,10 +12,10 @@ html {
     cursor: url('/assets/images/cursorcircle.png'), auto;
 }
 
-.cursor {
+/*.cursor {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     top: 50%;
     left: 50%;
     color: #fff;
@@ -28,7 +28,7 @@ html {
     border: 2px solid #A9CEC2;
     transition: all 0.4s ease-out;
     animation: moveCursor1 5s infinite alternate;
-}
+}*/
 
 
 
@@ -99,14 +99,61 @@ a:visited {
     opacity: 1;
 }
 
+.bold_text {
+    font-weight: 600;
+}
 
+@media only screen and (min-width: 320px) {
+
+    body,
+    html {
+        overflow: hidden;
+    }
+
+    .bgpic {
+        position: absolute;
+        height: 100%;
+    }
+
+    .index_flow_wrap,
+    .cursor {
+        display: none;
+    }
+
+    .darkoverlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #222222fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f1f1f1;
+    }
+
+    .small_screens {
+        background: url(/assets/images/OriginalDepictionofJewsoftheRenaissance.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 199%;
+        width: 100%;
+    }
+
+}
 
 @media only screen and (min-width: 1224px) {
 
     /*-------------MAIN PAGE-------------*/
 
-    .for_small_screens {
+    .for_small_screens,
+    .darkoverlay,
+    .small_screens {
         display: none;
+    }
+
+    .cursor {
+        display: flex;
     }
 
     body {
@@ -120,6 +167,8 @@ a:visited {
         display: flex;
         flex-flow: column;
     }
+
+
 
     /*-----TOP CONTENTS-----*/
 
@@ -413,4 +462,3 @@ a:visited {
 .snap_to_world:hover {
     opacity: 0.8;
 }
-

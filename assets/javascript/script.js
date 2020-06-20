@@ -2,12 +2,12 @@ $(document).ready(function () {
 
     // Cursor
 
-    const cursor = document.querySelector(".cursor");
+    /*const cursor = document.querySelector(".cursor");
 
     document.addEventListener("mousemove", (e) => {
         cursor.setAttribute(
             "style",
-            "top: " + (e.pageY - 13) + "px; left: " + (e.pageX - 13) + "px;"
+            "top: " + (e.pageY - 7) + "px; left: " + (e.pageX - 7) + "px;"
         );
     });
 
@@ -25,7 +25,8 @@ $(document).ready(function () {
         $('.cursor').removeClass('cursor_change');
         document.getElementById('cursor').innerHTML = "";
 
-    })
+    })*/
+
 
 
     // Local time display
@@ -58,22 +59,22 @@ $(document).ready(function () {
         }, function () {
             $('.history_tab').animate({
                 opacity: '1'
-            }, 200, function () {
+            }, 100, function () {
                 $('.science_tab').animate({
                     opacity: '1'
-                }, 200, function () {
+                }, 100, function () {
                     $('.language_tab').animate({
                         opacity: '1'
-                    }, 200, function () {
+                    }, 100, function () {
                         $('.survival_tab').animate({
                             opacity: '1'
-                        }, 200, function () {
+                        }, 100, function () {
                             $('.law_tab').animate({
                                 opacity: '1'
-                            }, 200, function () {
+                            }, 100, function () {
                                 $('.main_title').animate({
                                     opacity: '1'
-                                }, 2000, function () {
+                                }, 800, function () {
                                     $('.file_count, .local_date_time').animate({
                                         opacity: '1'
                                     })
@@ -92,7 +93,7 @@ $(document).ready(function () {
     $('.main_title_white').click(function () {
         $('.world_history_wrap').animate({
             opacity: '0'
-        }, 200, function () {
+        }, 100, function () {
             setTimeout(function () {
                 location.href = 'index.html'
             }, 500);
@@ -103,10 +104,10 @@ $(document).ready(function () {
     $('.history_tab').click(function () {
         $('.tabs').animate({
             opacity: '0'
-        }, function () {
+        }, 200, function () {
             $('.top_contents_index').delay(500).animate({
                 height: '0'
-            }, function () {
+            }, 200, function () {
                 setTimeout(function () {
                     location.href = "history.html";
                 })
@@ -114,14 +115,30 @@ $(document).ready(function () {
         })
     });
 
+    // Takes you to Language contents
+    $('.language_tab').click(function () {
+        $('.tabs').animate({
+            opacity: '0'
+        }, 200, function () {
+            $('.top_contents_index').delay(500).animate({
+                height: '0'
+            }, 200, function () {
+                setTimeout(function () {
+                    location.href = "language.html";
+                })
+            })
+        })
+    });
+
+
     // Takes you to Survival contents
     $('.survival_tab').click(function () {
         $('.tabs').animate({
             opacity: '0'
-        }, function () {
+        }, 200, function () {
             $('.top_contents_index').delay(500).animate({
                 height: '0'
-            }, function () {
+            }, 200, function () {
                 setTimeout(function () {
                     location.href = "survival.html";
                 })
@@ -130,36 +147,22 @@ $(document).ready(function () {
 
     });
 
+
     // Takes you to Language contents
-    $('.language_tab').click(function () {
+    $('.law_tab').click(function () {
         $('.tabs').animate({
             opacity: '0'
-        }, function () {
+        }, 200, function () {
             $('.top_contents_index').delay(500).animate({
                 height: '0'
-            }, function () {
+            }, 200, function () {
                 setTimeout(function () {
-                    location.href = "language.html";
+                    location.href = "law.html";
                 })
             })
         })
     });
 
-        // Takes you to Language contents
-        $('.law_tab').click(function () {
-            $('.tabs').animate({
-                opacity: '0'
-            }, function () {
-                $('.top_contents_index').delay(500).animate({
-                    height: '0'
-                }, function () {
-                    setTimeout(function () {
-                        location.href = "law.html";
-                    })
-                })
-            })
-        });
-    
 
 
 
