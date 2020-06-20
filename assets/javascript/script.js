@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // Cursor
 
-    /*const cursor = document.querySelector(".cursor");
+    const cursor = document.querySelector(".cursor");
 
     document.addEventListener("mousemove", (e) => {
         cursor.setAttribute(
@@ -25,7 +25,7 @@ $(document).ready(function () {
         $('.cursor').removeClass('cursor_change');
         document.getElementById('cursor').innerHTML = "";
 
-    })*/
+    })
 
 
 
