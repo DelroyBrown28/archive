@@ -60,7 +60,7 @@ $(document).ready(function () {
             $('.history_tab').animate({
                 opacity: '1'
             }, 100, function () {
-                $('.science_tab').animate({
+                $('.crisis_tab').animate({
                     opacity: '1'
                 }, 100, function () {
                     $('.language_tab').animate({

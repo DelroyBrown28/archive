@@ -262,8 +262,6 @@ a:visited {
 
         opacity: 0;
 
-
-
     }
 
     .top_tab_line {
@@ -279,12 +277,52 @@ a:visited {
 
     }
 
-    .tab_title {
+    .crisis_tab {
+        background-color: #222;
+        height: 120px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+
+    }
+
+    .crisis_title {
+        color: red;
+        font-size: 2em;
+        margin-top: ;
+        text-align: center;
+    }
+
+    .top_tab_line_crisis {
+        width: 35%;
+        margin: 0 auto;
+        border: 1px solid #fff;
+
+    }
+
+
+    .tab_title,
+    .tab_title_crisis {
         margin: 10px 0px;
         color: #fff;
         font-weight: 500;
         transition: 0.4s;
     }
+
+    .tab_title_crisis {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 22px;
+    }
+
+    .tab_description_crisis {
+        text-align: center;
+        color: #fff;
+        opacity: 0.7;
+    }
+
 
     .tab_description {
         color: #fff;
@@ -412,6 +450,27 @@ a:visited {
     }
 
     /*-------------//  HISTORY PAGE-------------*/
+    /*-------------PHOTOGRAPHY PAGE-------------*/
+
+
+    .image_wrap {
+        margin: 20px 0px 0px 20px;
+        display: flex;
+
+    }
+
+    .image1 {
+        height: 50%;
+    }
+
+    .text {
+        color: #f1f1f1;
+        width: 50%;
+        margin-left: 20px;
+        border-left: 2px solid #f1f1f1;
+    }
+
+    /*-------------//  PHOTOGRAPHY PAGE-------------*/
 }
 
 
