@@ -499,36 +499,37 @@ a:visited {
         font-weight: 300;
     }
 
-    /*-----MAGAZINE INFO-----*/
-
-    .mag_info_wrap {
+    .main_img_holder {
+        height: 70%;
         width: 90%;
         margin: 20px auto;
-
+        display: flex;
+        flex-flow: column;
 
     }
 
+    .webdubois {
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        filter: brightness(70%);
+    }
 
-    .magazine_info {
-        width: 90%;
-        font-size: 18px;
-        font-weight: 300;
+    .img_cap {
         color: #fff;
-        margin: 20px auto;
         text-align: center;
-
+        font-size: 18px;
+        font-weight: 200;
+        
     }
 
-
-
-    /*-----//  MAGAZINE INFO-----*/
     /*-----MAGAZINE COVERS-----*/
 
     .vol_wrap {
         display: flex;
         justify-content: space-evenly;
         width: 90%;
-        margin: 0 auto;
+        margin: 60px auto;
 
     }
 
