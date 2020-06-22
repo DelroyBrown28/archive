@@ -60,7 +60,7 @@ $(document).ready(function () {
             $('.history_tab').animate({
                 opacity: '1'
             }, 100, function () {
-                $('.crisis_tab').animate({
+                $('.law_tab').animate({
                     opacity: '1'
                 }, 100, function () {
                     $('.language_tab').animate({
@@ -69,7 +69,7 @@ $(document).ready(function () {
                         $('.survival_tab').animate({
                             opacity: '1'
                         }, 100, function () {
-                            $('.law_tab').animate({
+                            $('.crisis_tab').animate({
                                 opacity: '1'
                             }, 100, function () {
                                 $('.main_title').animate({
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
     // Takes you to history contents
     $('.history_tab').click(function () {
-        $('.tabs').animate({
+        $('.tab_fade').animate({
             opacity: '0'
         }, 200, function () {
             $('.top_contents_index').delay(500).animate({
@@ -115,9 +115,41 @@ $(document).ready(function () {
         })
     });
 
+    // Takes you to Law & Ownership contents
+    $('.law_tab').click(function () {
+        $('.tab_fade').animate({
+            opacity: '0'
+        }, 200, function () {
+            $('.top_contents_index').delay(500).animate({
+                height: '0'
+            }, 200, function () {
+                setTimeout(function () {
+                    location.href = "law.html";
+                })
+            })
+        })
+    });
+
+    // Takes you to The Crisis
+    $('.crisis_tab').click(function () {
+        $('.tab_fade').animate({
+            opacity: '0'
+        }, 200, function () {
+            $('.top_contents_index').delay(500).animate({
+                height: '0'
+            }, 200, function () {
+                setTimeout(function () {
+                    location.href = "the_crisis.html";
+                })
+            })
+        })
+    });
+
+
+
     // Takes you to Language contents
     $('.language_tab').click(function () {
-        $('.tabs').animate({
+        $('.tab_fade').animate({
             opacity: '0'
         }, 200, function () {
             $('.top_contents_index').delay(500).animate({
@@ -133,7 +165,7 @@ $(document).ready(function () {
 
     // Takes you to Survival contents
     $('.survival_tab').click(function () {
-        $('.tabs').animate({
+        $('.tab_fade').animate({
             opacity: '0'
         }, 200, function () {
             $('.top_contents_index').delay(500).animate({
@@ -148,20 +180,6 @@ $(document).ready(function () {
     });
 
 
-    // Takes you to Language contents
-    $('.law_tab').click(function () {
-        $('.tabs').animate({
-            opacity: '0'
-        }, 200, function () {
-            $('.top_contents_index').delay(500).animate({
-                height: '0'
-            }, 200, function () {
-                setTimeout(function () {
-                    location.href = "law.html";
-                })
-            })
-        })
-    });
 
 
 
