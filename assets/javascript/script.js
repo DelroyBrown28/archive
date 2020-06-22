@@ -11,12 +11,14 @@ $(document).ready(function () {
         );
     });
 
-    document.addEventListener("click", (e) => {
+    /*document.addEventListener("click", (e) => {
         cursor.classList.add("expand");
         setTimeout(() => {
             cursor.classList.remove("expand");
         }, 500);
-    });
+    });*/
+
+    // Changes cursor to text explaining "Large File..."
 
     $('.large_file ').hover(function () {
         $('.cursor').addClass('cursor_change');
@@ -26,6 +28,18 @@ $(document).ready(function () {
         document.getElementById('cursor').innerHTML = "";
 
     })
+
+    // Changes cursor to text explaining "Large File..."
+
+    $('.volume1_overlay').hover(function () {
+        $('.cursor').addClass('cursor_change_crisis');
+        document.getElementById('cursor').innerHTML = "CLICK TO VIEW ISSUES";
+    }, function () {
+        $('.cursor').removeClass('cursor_change_crisis');
+        document.getElementById('cursor').innerHTML = "";
+
+    })
+
 
 
 
@@ -178,6 +192,32 @@ $(document).ready(function () {
         })
 
     });
+
+    // Reveals magazines on The Crisis page
+
+        $('.volume1_overlay').click(function () {
+            $('.vol1_overlay_text').animate({
+                opacity: '0'
+            }, 200, function () {
+                $('.volume1_overlay').animate({
+                    height: '0px'
+                }, 200, function () {
+                    $('.volume1_overlay').delay(1500).fadeOut('slow');
+                })
+            })
+        })
+
+        $('.volume2_overlay').click(function () {
+            $('.vol2_overlay_text').animate({
+                opacity: '0'
+            }, 200, function () {
+                $('.volume2_overlay').animate({
+                    height: '0px'
+                }, 200, function () {
+                    $('.volume2_overlay').delay(1500).fadeOut('slow');
+                })
+            })
+        })
 
 
 
