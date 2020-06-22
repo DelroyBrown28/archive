@@ -458,13 +458,27 @@ a:visited {
     }
 
     .top_contents_crisis {
-        width: 100%;
+        width: 90%;
         height: 15%;
+        margin: 20px auto;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-flow: column;
 
+
+    }
+
+    .issue_volume_text {
+        color: #fff;
+        margin-bottom: -20px;
+        align-self: flex-start;
+        opacity: 0.7;
+    }
+
+    .title_underline {
+        width: 90%;
+        margin: 0 auto;
     }
 
     .main_title_crisis {
@@ -480,11 +494,25 @@ a:visited {
         font-size: 1.3em;
     }
 
-    /*-----MAGAZINE COVERS-----*/
+    /*-----MAGAZINE INFO-----*/
+
+    .mag_info_wrap {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-evenly;
 
 
+    }
 
-    /*-----//  MAGAZINE COVERS-----*/
+    .magazine_info_col1 {
+        width: 30%;
+        color: #fff;
+
+    }
+
+
+    /*-----//  MAGAZINE INFO-----*/
 
     /*-------------//  PHOTOGRAPHY PAGE-------------*/
 }
