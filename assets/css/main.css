@@ -103,6 +103,7 @@ a:visited {
     font-weight: 600;
 }
 
+
 @media only screen and (min-width: 320px) {
 
     body,
@@ -290,7 +291,6 @@ a:visited {
     .crisis_title {
         color: #fff;
         font-size: 2em;
-        margin-top: ;
         text-align: center;
         transition: 0.4s;
     }
@@ -453,8 +453,13 @@ a:visited {
     /*-------------PHOTOGRAPHY PAGE-------------*/
 
     #crisis_page_body {
+        height: 100%;
+        width: 100%;
         display: flex;
+        overflow: auto;
         flex-flow: column;
+        cursor: url('/assets/images/cursorcircle_white.png'), auto;
+
     }
 
     .top_contents_crisis {
@@ -465,7 +470,6 @@ a:visited {
         align-items: center;
         justify-content: center;
         flex-flow: column;
-
 
     }
 
@@ -492,6 +496,7 @@ a:visited {
         color: #fff;
         opacity: 0.7;
         font-size: 1.3em;
+        font-weight: 300;
     }
 
     /*-----MAGAZINE INFO-----*/
@@ -499,20 +504,65 @@ a:visited {
     .mag_info_wrap {
         width: 90%;
         margin: 20px auto;
-        display: flex;
-        justify-content: space-evenly;
 
 
     }
 
-    .magazine_info_col1 {
-        width: 30%;
+
+    .magazine_info {
+        width: 90%;
+        font-size: 18px;
+        font-weight: 300;
         color: #fff;
+        margin: 20px auto;
+        text-align: center;
 
     }
+
 
 
     /*-----//  MAGAZINE INFO-----*/
+    /*-----MAGAZINE COVERS-----*/
+
+    .vol_wrap {
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    .vol2_cover_wrap {
+        margin-top: 40px;
+    }
+
+    .volume {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #222;
+        width: 90%;
+        height: 304px;
+        opacity: 0.9;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+
+    }
+
+    .volume_img {
+        height: 100px;
+    }
+
+    .covers {
+        height: 250px;
+    }
+
+
+
+
+    /*-----//  MAGAZINE COVERS-----*/
 
     /*-------------//  PHOTOGRAPHY PAGE-------------*/
 }
