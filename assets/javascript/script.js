@@ -191,10 +191,13 @@ $(document).ready(function () {
         });
     })
 
-
-
-
-
+    $('.volume4_overlay').hover(function () {
+        $(this).fadeOut(function () {
+            $('.mag_cover_vol4').animate({
+                opacity: '1'
+            })
+        });
+    })
 
 
 })
