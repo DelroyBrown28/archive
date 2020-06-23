@@ -85,7 +85,6 @@ $(document).ready(function () {
     })
 
     // Current date for Crisis page
-
     var day = new Date();
     var weekday = new Array(7);
     weekday[0] = "Sunday";
@@ -190,20 +189,6 @@ $(document).ready(function () {
         })
     });
 
-    // Takes you to The Crisis
-    $('.crisis_tab').click(function () {
-        $('.tab_fade').animate({
-            opacity: '0'
-        }, 200, function () {
-            $('.top_contents_index').delay(500).animate({
-                height: '0'
-            }, 200, function () {
-                setTimeout(function () {
-                    location.href = "the_crisis.html";
-                })
-            })
-        })
-    });
 
 
     // Takes you to Language contents
