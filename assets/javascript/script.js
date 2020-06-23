@@ -199,5 +199,17 @@ $(document).ready(function () {
         });
     })
 
+    $('.volume5_overlay').hover(function () {
+        $(this).fadeOut(function () {
+            $('.mag_cover_vol5').animate({
+                opacity: '1'
+            })
+        });
+    })
+
+
+    // onscroll events
+
+
 
 })
