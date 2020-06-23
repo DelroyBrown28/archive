@@ -63,7 +63,7 @@
                 <p class="crisis_title">THE CRISIS</p>
                 <hr class="top_tab_line_crisis">
                 <h2 class="tab_title_crisis">A Record of The Darker Races</h2>
-                <p class="tab_description_crisis">W.E.B. Du Bois</p>
+                <p class="tab_description_crisis">All issues from 1912-1922</p>
             </div>
 
 
@@ -83,12 +83,7 @@
                 <p class="tab_description">Learn to live self sufficiently and know how to protect yourself for trying
                     times.</p>
             </div>
-
-
-
             <!--// TABS-->
-
-
         </div>
     </div>
 
@@ -98,6 +93,26 @@
     <!--// MAIN TABS SECTION-->
     <script src="./assets/javascript/jquery-3.5.1.min.js"></script>
     <script src="./assets/javascript/script.js"></script>
+
+    <script>
+        // Local time display
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function timeUpdate() {
+            var grabDate = new Date();
+            var theTime = document.getElementById("the_time");
+            var hours = addZero(grabDate.getHours());
+            var minutes = addZero(grabDate.getMinutes());
+            var seconds = addZero(grabDate.getSeconds());
+            theTime.innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval(timeUpdate, 1000);
+    </script>
 
 
 </body>

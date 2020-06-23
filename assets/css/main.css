@@ -523,7 +523,7 @@ a:visited {
         display: flex;
         flex-flow: column;
         border: 2px solid rgba(255, 255, 255, 0.459);
-       
+
     }
 
     .webdubois {
@@ -552,22 +552,22 @@ a:visited {
 
     }
 
-    .volume_overlays {
-        opacity: 0.9;
-    }
 
 
     .volume1_overlay,
-    .volume2_overlay {
+    .volume2_overlay,
+    .volume3_overlay {
         position: absolute;
         width: 100%;
         height: 100%;
         display: flex;
         flex-flow: column;
         z-index: 100;
+        cursor: pointer;
 
         transition: 2s;
     }
+
 
     .volume_overlay_text,
     .vol1_overlay_text,
@@ -575,7 +575,7 @@ a:visited {
         margin: auto;
     }
 
-    .mag_cover {
+    .mag_covers {
         transition: 0.4s;
         cursor: pointer;
         opacity: 0.3;
@@ -642,6 +642,6 @@ a:visited {
     opacity: 0.8;
 }
 
-.mag_cover:hover {
+.mag_covers:hover {
     filter: brightness(100%);
 }

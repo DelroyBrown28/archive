@@ -31,23 +31,6 @@ $(document).ready(function () {
 
 
 
-    // Local time display
-    function addZero(i) {
-        if (i < 10) {
-            i = "0" + i;
-        }
-        return i;
-    }
-
-    function timeUpdate() {
-        var grabDate = new Date();
-        var theTime = document.getElementById("the_time");
-        var hours = addZero(grabDate.getHours());
-        var minutes = addZero(grabDate.getMinutes());
-        var seconds = addZero(grabDate.getSeconds());
-        theTime.innerHTML = hours + ":" + minutes + ":" + seconds;
-    }
-    setInterval(timeUpdate, 1000);
 
 
 
@@ -185,24 +168,32 @@ $(document).ready(function () {
 
 
     $('.volume1_overlay').hover(function () {
-        $(this).fadeOut('200', function () {
-            $('.mag_cover').animate({
+        $(this).fadeOut(function () {
+            $('.mag_cover_vol1').animate({
                 opacity: '1'
             })
         });
     })
 
-    $('.volume2_overlay').click(function () {
-        $('.vol2_overlay_text').animate({
-            opacity: '0'
-        }, 200, function () {
-            $('.volume2_overlay').animate({
-                height: '0px'
-            }, 200, function () {
-                $('.volume2_overlay').delay(1500).fadeOut('slow');
+    $('.volume2_overlay').hover(function () {
+        $(this).fadeOut(function () {
+            $('.mag_cover_vol2').animate({
+                opacity: '1'
             })
-        })
+        });
     })
+
+    $('.volume3_overlay').hover(function () {
+        $(this).fadeOut(function () {
+            $('.mag_cover_vol3').animate({
+                opacity: '1'
+            })
+        });
+    })
+
+
+
+
 
 
 
