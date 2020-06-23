@@ -18,24 +18,10 @@ $(document).ready(function () {
         }, 500);
     });*/
 
-    // Changes cursor to text explaining "Large File..."
-
-    $('.large_file ').hover(function () {
-        $('.cursor').addClass('cursor_change');
-        document.getElementById('cursor').innerHTML = "LARGE FILE, CLICK TO DOWNLOAD";
-    }, function () {
-        $('.cursor').removeClass('cursor_change');
-        document.getElementById('cursor').innerHTML = "";
-
-    })
-
-
-
-
 
 
     // Fade in for Index page
-    function fadeInOnload() {
+    window.addEventListener('load', function () {
         $('.world_history_wrap').animate({
             opacity: '1'
         });
@@ -72,8 +58,85 @@ $(document).ready(function () {
                 })
             })
         })
-    }
-    window.onload = fadeInOnload;
+
+    })
+
+    // Fade in for The Crisis page
+    window.addEventListener('load', function () {
+        $('.main_title_crisis').animate({
+            opacity: '1'
+        }, function () {
+            $('.subtitle_crisis').animate({
+                opacity: '0.7'
+            }, function () {
+                $('.title_underline').animate({
+                    width: '90%'
+                }, function () {
+                    $('.date').animate({
+                        opacity: '1'
+                    }, function () {
+                        $('.main_img_holder').animate({
+                            opacity: '1'
+                        })
+                    })
+                })
+            })
+        })
+    })
+
+    // Current date for Crisis page
+
+    var day = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var newDay = weekday[day.getDay()];
+    document.getElementById("current_day").innerHTML = newDay + ',';
+
+
+    // displays month
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+
+    var date = new Date();
+    var currentMonth = month[date.getMonth()];
+    document.getElementById("current_month").innerHTML = currentMonth;
+
+
+    // displays year
+
+    var year = new Date();
+    var newYear = year.getFullYear();
+    document.getElementById('current_year').innerHTML = newYear;
+
+
+    // Changes cursor to text explaining "Large File..."
+
+    $('.large_file ').hover(function () {
+        $('.cursor').addClass('cursor_change');
+        document.getElementById('cursor').innerHTML = "LARGE FILE, CLICK TO DOWNLOAD";
+    }, function () {
+        $('.cursor').removeClass('cursor_change');
+        document.getElementById('cursor').innerHTML = "";
+
+    })
 
 
     // Takes you to index page
@@ -86,6 +149,16 @@ $(document).ready(function () {
             }, 500);
         })
     });
+
+    // Takes you to Index page from The Crisis page
+
+    $('.archive_title_home').click(function () {
+        $('#crisis_page_body').animate({
+            opacity: '0'
+        }, function () {
+            location.href = "index.html";
+        })
+    })
 
     // Takes you to history contents
     $('.history_tab').click(function () {
@@ -133,7 +206,6 @@ $(document).ready(function () {
     });
 
 
-
     // Takes you to Language contents
     $('.language_tab').click(function () {
         $('.tab_fade').animate({
@@ -166,6 +238,8 @@ $(document).ready(function () {
 
     });
 
+
+    // Hides volume overlays on Crisis page
 
     $('.volume1_overlay').hover(function () {
         $(this).fadeOut(function () {
