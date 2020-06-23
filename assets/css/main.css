@@ -566,7 +566,6 @@ a:visited {
         flex-flow: column;
         z-index: 100;
 
-
         transition: 2s;
     }
 
@@ -576,18 +575,21 @@ a:visited {
         margin: auto;
     }
 
-
-    .covers {
-        height: 250px;
-        z-index: 2;
-
-    }
-
     .mag_cover {
         transition: 0.4s;
         cursor: pointer;
         opacity: 0.3;
+        filter: brightness(80%);
+
     }
+
+    .covers {
+        height: 250px;
+        transition: 0.4s;
+        z-index: 2;
+
+    }
+
 
     .issue_number {
         color: #fff;
@@ -640,3 +642,6 @@ a:visited {
     opacity: 0.8;
 }
 
+.mag_cover:hover {
+    filter: brightness(100%);
+}
