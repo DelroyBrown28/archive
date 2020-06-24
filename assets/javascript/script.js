@@ -1,15 +1,16 @@
 $(document).ready(function () {
 
     // Cursor
+    window.addEventListener('load', function () {
+        const cursor = document.querySelector(".cursor");
 
-    const cursor = document.querySelector(".cursor");
-
-    document.addEventListener("mousemove", (e) => {
-        cursor.setAttribute(
-            "style",
-            "top: " + (e.pageY - 7) + "px; left: " + (e.pageX - 7) + "px;"
-        );
-    });
+        document.addEventListener("mousemove", (e) => {
+            cursor.setAttribute(
+                "style",
+                "top: " + (e.pageY - 7) + "px; left: " + (e.pageX - 7) + "px;"
+            );
+        });
+    })
 
     /*document.addEventListener("click", (e) => {
         cursor.classList.add("expand");
@@ -70,7 +71,8 @@ $(document).ready(function () {
                 opacity: '0.7'
             }, function () {
                 $('.title_underline').animate({
-                    width: '90%'
+                    width: '90%',
+                    opacity: '1'
                 }, function () {
                     $('.date').animate({
                         opacity: '1'
@@ -84,46 +86,6 @@ $(document).ready(function () {
         })
     })
 
-    // Current date for Crisis page
-    var day = new Date();
-    var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-
-    var newDay = weekday[day.getDay()];
-    document.getElementById("current_day").innerHTML = newDay + ',';
-
-
-    // displays month
-    var month = new Array();
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
-
-    var date = new Date();
-    var currentMonth = month[date.getMonth()];
-    document.getElementById("current_month").innerHTML = currentMonth;
-
-
-    // displays year
-
-    var year = new Date();
-    var newYear = year.getFullYear();
-    document.getElementById('current_year').innerHTML = newYear;
 
 
     // Changes cursor to text explaining "Large File..."
@@ -136,6 +98,18 @@ $(document).ready(function () {
         document.getElementById('cursor').innerHTML = "";
 
     })
+
+    // Changes cursor to text reading "W.E.B. Du Bois"
+
+    $('.webdubois').hover(function () {
+        $('.cursor').addClass('cursor_change_crisis');
+        document.getElementById('cursor').innerHTML = "W.E.B Du Bois";
+    }, function () {
+        $('.cursor').removeClass('cursor_change_crisis');
+        document.getElementById('cursor').innerHTML = "";
+
+    })
+
 
 
     // Takes you to index page
@@ -224,6 +198,7 @@ $(document).ready(function () {
     });
 
 
+
     // Hides volume overlays on Crisis page
 
     $('.volume1_overlay').hover(function () {
@@ -268,6 +243,24 @@ $(document).ready(function () {
 
 
     // onscroll events
+    var div = $("#volume1");
+    $(window).scroll(function () {
+        var windowpos = $(window).scrollTop();
+        //---check the console to acurately see what the positions you need---
+        console.log(windowpos);
+        //---------------------
+
+        //Enter the band you want the div to be displayed
+        if ((windowpos >= 0) && (windowpos <= 114)) {
+            div.addClass("appear");
+        } else {
+            div.removeClass("appear");
+        }
+
+
+    })
+
+
 
 
 
