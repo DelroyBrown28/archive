@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     // Cursor
     window.addEventListener('load', function () {
         const cursor = document.querySelector(".cursor");
@@ -240,27 +241,6 @@ $(document).ready(function () {
             })
         });
     })
-
-
-    // onscroll events
-    var div = $("#volume1");
-    $(window).scroll(function () {
-        var windowpos = $(window).scrollTop();
-        //---check the console to acurately see what the positions you need---
-        console.log(windowpos);
-        //---------------------
-
-        //Enter the band you want the div to be displayed
-        if ((windowpos >= 0) && (windowpos <= 114)) {
-            div.addClass("appear");
-        } else {
-            div.removeClass("appear");
-        }
-
-
-    })
-
-
 
 
 
