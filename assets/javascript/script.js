@@ -242,6 +242,14 @@ $(document).ready(function () {
         });
     })
 
+    $('.volume6_overlay').hover(function () {
+        $(this).fadeOut(function () {
+            $('.mag_cover_vol6').animate({
+                opacity: '1'
+            })
+        });
+    })
+
 
 
 })
